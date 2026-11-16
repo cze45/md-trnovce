@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<title>MD Trnovče - rešetke i gazišta po meri</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="MD Trnovče: proizvodnja rešetkastih gazišta od 1993. Presovana, SP, puna i protivklizna gazišta, stepenici i vezni elementi po meri. Koncept sajta.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&amp;family=Cinzel:wght@700&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@500&amp;display=swap">
+<style>
+:root{--bg:#E6E8E7;--surface:#F1F3F2;--ink:#141718;--muted:#4E5559;--line:#C6CBC9;--accent:#0B7277;--accent-d:#08595D;--brand:#11ABB0;--dark:#131617}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img{max-width:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Archivo,sans-serif;line-height:1.05;letter-spacing:-.02em;text-wrap:balance}
+p,li{text-wrap:pretty}
+a{color:inherit;touch-action:manipulation}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.dark a:focus-visible,.card a:focus-visible{outline-color:#fff}
+section[id],#top{scroll-margin-top:84px}
+p{max-width:65ch}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px}
+.cta .tlink{font-size:16px}
+.more a::after{content:"";position:absolute;inset:0;z-index:1}
+.card-go{pointer-events:none;position:absolute;top:16px;right:16px;z-index:2;width:44px;height:44px;border-radius:50%;border:1.5px solid rgba(255,255,255,.7);background:rgba(10,12,13,.35);display:flex;align-items:center;justify-content:center;transition:background-color .2s,border-color .2s,transform .2s}
+.card-go svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.card:hover .card-go,.card:focus-within .card-go{background:var(--accent);border-color:var(--accent);transform:translate(2px,-2px)}
+@media (prefers-reduced-motion:reduce){.card-go{transition:none}.card:hover .card-go{transform:none}}
+.skip{position:absolute;left:16px;top:-80px;background:var(--accent);color:#fff;padding:12px 18px;border-radius:4px;font-weight:600;font-size:14px;z-index:70}
+.skip:focus{top:12px}
+.concept{color:#D3D8DB;font:500 12px/1.4 "IBM Plex Mono",monospace;text-align:center;padding:8px 16px}
+.kick{font:500 13px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.ex{color:#7A5400;font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;padding:0 28px;min-height:52px;border-radius:6px;border:0;font-size:17px;font-family:inherit;cursor:pointer}
+.btn:hover{background:var(--accent-d)}
+.tlink{display:inline-flex;align-items:center;gap:6px;min-height:48px;font-weight:600;font-size:15px;color:var(--accent);text-decoration:none;border-bottom:2px solid transparent}
+.tlink:hover{border-bottom-color:currentColor}
+.ico{width:28px;height:28px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* zaglavlje: providno preko slike, posle 160px skrola dobija pozadinu */
+.hdr{position:sticky;top:0;z-index:50;margin-bottom:-76px;background:rgba(230,232,231,.97);border-bottom:1px solid var(--line);color:var(--ink)}
+@supports (animation-timeline:scroll()){
+.hdr{background:transparent;border-bottom-color:rgba(198,203,201,0);animation:hdbg linear both;animation-timeline:scroll(root block);animation-range:0 160px}
+}
+@keyframes hdbg{from{background:rgba(230,232,231,0);border-bottom-color:rgba(198,203,201,0)}to{background:rgba(230,232,231,.97);border-bottom-color:#C6CBC9}}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:16px;flex-wrap:wrap}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:inherit;min-height:44px}
+.logo .mk{display:flex;flex-direction:column;line-height:1}
+.logo b{font:700 34px/0.9 Cinzel,serif;letter-spacing:-.04em}
+.logo small{font:600 8px "IBM Plex Sans",sans-serif;letter-spacing:.14em;margin-top:3px}
+.logo svg{width:22px;height:30px}
+.nav{display:none;gap:26px;font-size:15px;font-weight:500;align-items:center}
+.nav a{text-decoration:none;min-height:48px;display:inline-flex;align-items:center;border-bottom:2px solid transparent}
+.nav a:hover{border-bottom-color:currentColor}
+.call{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;color:#fff;background:var(--accent);border-radius:6px;padding:0 14px;min-height:48px}
+.call:hover{background:var(--accent-d)}
+.call svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* hero: fotografija je pozadina desne strane heroja (do ivice ekrana) i bledi ka tekstu.
+   Prelaz počinje tek posle kraja tekstualne kolone, pa se tekst i slika ne preklapaju */
+.hero{position:relative;overflow:hidden;display:flex;align-items:flex-end}
+.hero img.bg{position:absolute;left:0;top:76px;width:100%;height:min(100vw,440px);object-fit:cover;object-position:50% 40%;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 8%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 8%,#000 70%,transparent 100%)}
+.hero .wrap{position:relative;width:100%;padding-top:calc(min(100vw,440px) + 92px);padding-bottom:64px}
+.hero h1{font-size:clamp(3rem,1.6rem + 3.4vw,3.85rem);font-weight:800;margin-top:14px;letter-spacing:-.035em}
+.sub{font-size:18px;color:var(--muted);margin:18px 0 28px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:28px;font:500 12px/1.5 "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.trust span{display:inline-flex;align-items:center;gap:8px}
+.trust span::before{content:"";width:8px;height:8px;background:var(--accent);transform:rotate(45deg)}
+
+
+.sec{border-top:1px solid var(--line);padding:64px 0}
+.head{display:grid;gap:12px;margin-bottom:32px}
+.h2{font-size:clamp(1.85rem,1.4rem + 1.9vw,2.75rem);font-weight:800;margin-top:10px}
+.head p{color:var(--muted)}
+
+/* katalog: 4 kartice sa slikom, detalji na hover */
+.cards{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.card{position:relative;overflow:hidden;border-radius:8px;background:var(--dark);color:#fff;min-height:500px;display:flex;align-items:flex-end}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover img{transform:scale(1.04)}
+.card .fov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,12,13,.94) 0%,rgba(10,12,13,.72) 42%,rgba(10,12,13,.05) 72%)}
+.card .bd{position:relative;padding:22px;width:100%}
+.card .no{font:500 12px "IBM Plex Mono",monospace;letter-spacing:.1em;color:#7FD6D9}
+.card h3{font-size:clamp(1.4rem,1.2rem + .6vw,1.65rem);font-weight:800;margin-top:6px;color:#fff}
+/* naslovi u dva reda na svim karticama, pa broj, kategorija i naslov stoje u istoj liniji */
+@media (min-width:768px){.card h3{min-height:2.1em;display:flex;align-items:flex-start}}
+.more{display:grid;grid-template-rows:1fr;transition:grid-template-rows .3s ease,opacity .3s ease}
+.more>div{overflow:hidden;min-height:0}
+.more p{font-size:15px;line-height:1.55;color:#DDE2E4;margin-top:14px}
+.more a{display:inline-flex;align-items:center;min-height:48px;margin-top:6px;color:#fff;font-weight:600;font-size:15px;text-decoration:none;border-bottom:2px solid #7FD6D9}
+.extra{display:grid;gap:16px;margin-top:24px;padding-top:24px;border-top:1px solid var(--line)}
+.extra p{font-size:16px;color:var(--muted)}
+.extra .docs{display:flex;flex-wrap:wrap;gap:4px 20px}
+
+/* kupci */
+.logos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:24px}
+.logos div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:104px;display:flex;align-items:center;justify-content:center;padding:20px;background:var(--surface)}
+.logos img{max-width:100%;max-height:44px;object-fit:contain;filter:grayscale(1);opacity:.8;transition:filter .2s,opacity .2s}
+.logos div:hover img{filter:none;opacity:1}
+.more-clients{margin-top:20px;font-size:15px;color:var(--muted)}
+
+/* o nama */
+.two{display:grid;gap:32px}
+.about-img{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/3;background:var(--dark)}
+.about-img img{width:100%;height:100%;object-fit:cover;display:block}
+.about p{color:var(--muted);margin-top:16px}
+.moto{margin-top:24px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:800 22px/1.25 Archivo,sans-serif}
+.moto span{color:var(--accent)}
+.quote{margin-top:24px;font-size:17px}
+.quote cite{display:block;margin-top:8px;font:500 13px "IBM Plex Mono",monospace;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.g4{display:grid;grid-template-columns:minmax(0,1fr);margin-top:48px;border-top:1px solid var(--line)}
+.g4>div{padding:24px 0;border-bottom:1px solid var(--line);display:grid;gap:12px;align-content:start}
+.g4 b{font:800 20px/1.2 Archivo,sans-serif}
+.g4 span{color:var(--muted);font-size:15px}
+.fig2{margin-top:16px;display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;font-size:14px;color:var(--muted)}
+.fig2 img{width:120px;height:90px;object-fit:cover;border-radius:4px;display:block}
+
+/* FAQ: 9 pitanja u dve kolone, deseto polje je poziv */
+.faq{display:grid;grid-template-columns:minmax(0,1fr);border-top:1px solid var(--line)}
+.faq details,.faq .ask{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:72px;padding:14px 0;font-weight:600;font-size:17px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:1.8;flex:none;transition:transform .2s}
+.faq details[open] summary svg{transform:rotate(45deg)}
+.faq details p{padding:0 0 20px;color:var(--muted);font-size:16px}
+.ask{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding:14px 0}
+.ask b{font-size:17px}
+.ask span{display:block;font-size:15px;color:var(--muted)}
+/* samo obris ikonice telefona; polje za dodir ostaje 44 px */
+.ask a{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:6px;background:transparent;flex:none}
+.ask a:hover{background:#E2F0F0}
+.ask svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+.band{color:#EEF1F2;padding:64px 0}
+.band .wrap{display:grid;gap:24px;align-items:end}
+.band h2{font-size:clamp(1.85rem,1.4rem + 1.9vw,2.75rem);font-weight:800;margin-top:10px}
+.band p{color:#B3BABE;margin-top:12px}
+.band .kick{color:#86DCDF}
+.fbgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:32px}
+.tile{position:relative;display:block;aspect-ratio:1/1;overflow:hidden;border-radius:6px;background:#0E1114;text-decoration:none}
+.tile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.tile:hover img{transform:scale(1.05)}
+.tile span{position:absolute;left:0;right:0;bottom:0;padding:28px 12px 10px;background:linear-gradient(0deg,rgba(10,12,13,.9),rgba(10,12,13,0));color:#fff;font-weight:600;font-size:14px}
+@media (min-width:768px){.fbgrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:48px}}
+@media (prefers-reduced-motion:reduce){.tile img{transition:none}.tile:hover img{transform:none}}
+
+/* kontakt: obe kolone iste visine */
+.contact{display:grid;gap:32px;align-items:stretch}
+.info{display:flex;flex-direction:column}
+.rows{border-top:1px solid var(--line);margin-bottom:20px}
+.rows>div{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line)}
+.lbl{display:block;font:500 12px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.rows a{text-decoration:none;font-weight:600;font-size:18px;display:flex;align-items:center;min-height:34px}
+.rows a:hover{color:var(--accent)}
+.map{flex:1;min-height:200px;background:#D6DAD8;border:1px dashed #9EA5A2;border-radius:6px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;font:500 12px "IBM Plex Mono",monospace;letter-spacing:.06em;color:#3F4548}
+.form{border:1px solid var(--line);background:var(--surface);padding:24px;border-radius:8px;display:flex;flex-direction:column;gap:16px}
+.form h3{font-size:26px;font-weight:800}
+.form label{display:grid;gap:6px;font-size:14px;font-weight:600}
+.field{height:50px;font:400 16px "IBM Plex Sans",sans-serif;border:1px solid #6B7076;border-radius:4px;padding:0 14px;background:#fff;color:var(--ink);width:100%}
+.field::placeholder{color:#6B7076}
+textarea.field{height:auto;min-height:120px;padding:12px 14px;resize:vertical;flex:1}
+.grow{flex:1;display:grid;grid-template-rows:auto 1fr}
+.row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.form .btn{width:100%}
+.note{font-size:13px;color:var(--muted)}
+
+/* futer */
+/* futer: podloga je izvučena iz same fotografije loga.
+   md-tile = tekstura tkanine iz fotografije (high-pass, bešavno ogledalo, 224 px u originalnoj razmeri),
+   md-light = mapa svetla fotografije bez loga (svetla traka gore levo, tamni ugao gore desno, odsjaj dole desno),
+   md-logo = logo izdvojen iz fotografije sa providnom pozadinom, pa nema šava */
+.ftr{position:relative;color:#D3D8DB;padding:56px 0 28px;font-size:15px}
+/* ista podloga za sve tamne sekcije: futer, traka sa pozivom na upit i traka "koncept" na vrhu */
+.ftr,.band,.concept{background-color:#1A1E21;
+  background-image:url("images/tekstura.png"),url("images/svetlo.png");
+  background-size:224px 224px,100% 100%;background-repeat:repeat,no-repeat}
+.concept{background-image:url("images/tekstura.png");background-size:224px 224px;background-repeat:repeat}
+.ftr .top{display:grid;gap:32px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.14)}
+.flogo{display:block;width:300px;max-width:100%;height:auto;margin-left:-8px}
+.ftr p{color:#B3BABE;font-size:15px;margin-top:14px;max-width:34ch}
+.ftr h4{font:500 12px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#86DCDF;margin-bottom:12px}
+.ftr ul{list-style:none;display:grid;gap:2px}
+.ftr li a{display:inline-flex;align-items:center;min-height:48px;text-decoration:none;color:#EEF1F2}
+.ftr li a:hover{color:#86DCDF}
+.ftr li span{color:#B3BABE}
+.fb{display:inline-flex;align-items:center;gap:10px;margin-top:16px;min-height:48px;text-decoration:none;color:#EEF1F2;border:1px solid rgba(255,255,255,.28);border-radius:6px;padding:0 14px;background:rgba(10,13,16,.45)}
+.fb:hover{border-color:#86DCDF}
+.fb svg{width:18px;height:18px;fill:#EEF1F2}
+.ftr .bot{display:grid;gap:8px;padding-top:24px;font-size:13px;color:#A9B0B5}
+
+@media (min-width:768px){
+.nav{display:flex}
+.hero{min-height:760px;align-items:center}
+.hero img.bg{left:auto;right:0;top:76px;width:52%;height:calc(100% - 76px);object-position:60% 45%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 18%),linear-gradient(180deg,transparent 0%,#000 7%,#000 86%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 18%),linear-gradient(180deg,transparent 0%,#000 7%,#000 86%,transparent 100%);mask-composite:intersect}
+.hero .sub{max-width:30em}
+.hero .wrap{padding-top:140px;padding-bottom:140px}
+.hero .wrap>div{max-width:calc(50% - 32px)}
+.sub{font-size:19px}
+.sec{padding:112px 0}
+.head{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px;align-items:end;margin-bottom:48px}
+.cards{grid-template-columns:repeat(4,minmax(0,1fr))}
+.card{min-height:480px}
+.more{grid-template-rows:0fr;opacity:0}
+.card:hover .more,.card:focus-within .more{grid-template-rows:1fr;opacity:1}
+.extra{grid-template-columns:1.4fr 1fr;align-items:center;gap:48px}
+.logos{grid-template-columns:repeat(5,minmax(0,1fr))}
+.two{grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;align-items:start}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:24px;border-bottom:1px solid var(--line)}
+.g4>div{border-bottom:0;position:relative;padding:28px 8px 28px 0}
+.g4>div+div::before{content:"";position:absolute;left:-12px;top:0;bottom:0;width:1px;background:var(--line)}
+.faq{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px;grid-auto-flow:column;grid-template-rows:repeat(5,auto)}
+.band{padding:96px 0}
+.band .wrap{grid-template-columns:1fr auto;gap:48px}
+.contact{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.form{padding:32px}
+.ftr .top{grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}
+.ftr .bot{grid-template-columns:1fr auto}
+}
+/* upit u koracima, po uzoru na anketu sa sajta Trgoimpex W: jedno pitanje po koraku, klik na odgovor vodi dalje */
+.an-title{font-size:24px;font-weight:800;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.an-h{display:grid;gap:8px}
+.an-pg{height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+.an-pg i{display:block;height:100%;background:var(--accent);border-radius:999px;transition:width .3s ease}
+.an-st{font-size:13px;font-weight:600;color:var(--muted)}
+.an-step{display:grid;gap:12px}
+.an-q{font:800 22px/1.25 Archivo,sans-serif;letter-spacing:-.02em}
+.an-l{display:grid;gap:10px}
+.an-t{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:58px;padding:10px 18px;background:#fff;border:1.5px solid #B4BBB8;border-radius:8px;font:600 16px/1.35 "IBM Plex Sans",sans-serif;color:var(--ink);text-align:left;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
+.an-t small{display:block;margin-top:2px;font-weight:400;font-size:13px;color:var(--muted)}
+.an-t .ar{width:16px;height:16px;stroke:var(--accent);fill:none;stroke-width:2.4;flex:none;transition:transform .2s}
+.an-t:hover{border-color:var(--accent);color:var(--accent)}
+.an-t:hover .ar{transform:translate(3px,-3px)}
+.an-t.sel{border-color:var(--accent);background:#E2F0F0}
+.cards1{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.an-card{flex-direction:column;justify-content:center;gap:14px;aspect-ratio:5/4;padding:14px;text-align:center}
+.an-card .ic{width:52px;height:52px;stroke:var(--accent);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.an-card span{font:800 15px/1.2 Archivo,sans-serif;text-transform:uppercase;letter-spacing:.01em}
+.an-card:hover{background:#E2F0F0;color:var(--ink)}
+.an-wide{grid-column:1/-1;justify-content:flex-start;gap:14px}
+.an-wide .ic{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.6;stroke-linecap:round;flex:none}
+.an-wide span{margin-right:auto}
+.an-bks{display:flex;flex-wrap:wrap;gap:0 18px}
+.an-bk{display:inline-flex;align-items:center;min-height:48px;padding:0 4px;background:none;border:0;font:600 15px "IBM Plex Sans",sans-serif;color:var(--muted);cursor:pointer}
+.an-bk:hover{color:var(--accent);text-decoration:underline;text-underline-offset:3px}
+.an-sum{border-top:1px solid var(--line)}
+.an-sum>div{display:grid;grid-template-columns:110px minmax(0,1fr);gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.an-sum dt{font-weight:600;color:var(--muted)}
+.an-sum dd{font-weight:600}
+.an-c{display:grid;gap:14px}
+.an-c label span{font-weight:400;color:var(--muted)}
+.done{display:grid;gap:12px;justify-items:start}
+.done svg{width:44px;height:44px;stroke:var(--accent);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.done p{color:var(--muted);font-size:16px}
+.err{font-size:14px;font-weight:600;color:#A3261B}
+@media (max-width:600px){.an-card{gap:10px;padding:10px}.an-card .ic{width:44px;height:44px}.an-card span{font-size:13px}.an-sum>div{grid-template-columns:1fr;gap:2px}}
+@media (prefers-reduced-motion:reduce){.an-pg i,.an-t,.an-t .ar{transition:none}.an-t:hover .ar{transform:none}}
+@media (prefers-reduced-motion:reduce){.card img,.more,.faq summary svg{transition:none}.card:hover img{transform:none}}
+</style>
+
+</head>
+<body>
+
+
+<div style="width: 100%; min-height: 100vh; background: #E6E8E7">
+
+<a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
+<div class="concept">Koncept sajta u izradi. Ovo nije zvanični sajt MD szmr Trnovče.</div>
+
+<header class="hdr">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="MD rešetkasta gazišta, početna">
+      <span class="mk"><b>MD</b><small>REŠETKASTA GAZIŠTA</small></span>
+      <svg viewBox="0 0 22 30" aria-hidden="true"><g fill="currentColor" opacity=".8"><rect x="1" y="1" width="4" height="4" transform="rotate(45 3 3)"></rect><rect x="1" y="9" width="4" height="4" transform="rotate(45 3 11)"></rect><rect x="1" y="17" width="4" height="4" transform="rotate(45 3 19)"></rect><rect x="1" y="25" width="4" height="4" transform="rotate(45 3 27)"></rect><rect x="7" y="5" width="4" height="4" transform="rotate(45 9 7)"></rect><rect x="7" y="13" width="4" height="4" transform="rotate(45 9 15)"></rect><rect x="7" y="21" width="4" height="4" transform="rotate(45 9 23)"></rect><rect x="13" y="9" width="4" height="4" transform="rotate(45 15 11)"></rect><rect x="13" y="17" width="4" height="4" transform="rotate(45 15 19)"></rect><rect x="18" y="13" width="3.4" height="3.4" transform="rotate(45 19.7 14.7)"></rect></g></svg>
+    </a>
+    <nav class="nav" aria-label="Glavna navigacija"><a href="#proizvodi">Proizvodi</a><a href="#radovi">Radovi</a><a href="#kupci">Kupci</a><a href="#o-nama">O nama</a><a href="#pitanja">Pitanja</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="call" href="tel:+38163232758"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg><span>063 232-758</span></a>
+  </div>
+</header>
+
+<main id="sadrzaj">
+<div class="hero" id="top">
+  <img class="bg" src="images/hero-toranj.webp" alt="Čelični toranj sa rešetkastim podestima i stepeništem">
+  <div class="fade"></div>
+  <div class="wrap">
+    <div>
+      <div class="kick">Proizvodnja rešetkastih gazišta · Trnovče · od 1993.</div>
+      <h1>Rešetke i gazišta po vašoj meri</h1>
+      <p class="sub">Presovana, SP, puna i protivklizna gazišta, stepenici i vezni elementi. Pravimo ih po DIN 24537 i toplo cinkujemo po EN ISO 1461.</p>
+      <div class="cta"><a class="btn" href="#kontakt">Zatraži ponudu</a><a class="tlink" href="#radovi">Pogledajte naše radove <span aria-hidden="true">→</span></a></div>
+      <div class="trust"><span>Atest Mašinskog fakulteta</span><span>S235JR · Č.0361</span><span>100% srpsko poreklo</span></div>
+    </div>
+  </div>
+</div>
+
+<section class="sec" id="proizvodi" style="border-top: 0">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="kick">Proizvodi</div><h2 class="h2">Četiri tipa, svaki po vašim merama</h2></div>
+      
+    </div>
+    <div class="cards">
+      <article class="card">
+        <img src="images/resetke-po-meri.webp" alt="Presovane rešetke sa izrezima za cevi i šahtove">
+        <div class="fov"></div>
+        <span class="card-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
+        <div class="bd">
+          <div class="no">01 · REŠETKE</div>
+          <h3>Presovana gazišta</h3>
+          <div class="more"><div>
+            <p>Podužne trake 2,5×10 mm upresujemo pod pritiskom od 5000 kN. Opšivamo ih U-profilom. Lamele 2 i 3 mm. Oblike i izreze radimo po zahtevu.</p>
+            <p>Za prelaz vozila: 195×995, 245×995 i 295×995 mm.</p>
+            <a href="#kontakt">Zatražite ponudu →</a>
+          </div></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/sp-gaziste.jpg" alt="SP gazište ugrađeno u kanal autoperionice">
+        <div class="fov"></div>
+        <span class="card-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
+        <div class="bd">
+          <div class="no">02 · GAZIŠTA</div>
+          <h3>SP i puna gazišta</h3>
+          <div class="more"><div>
+            <p>SP: spiralni profil 6×6 mm zavaren u noseću traku, lamele od 2 do 5 mm.</p>
+            <p>Puno, sistem češalj: lamele i stabilizatori iste debljine i visine, visina 20-60 mm.</p>
+            <a href="#kontakt">Zatražite ponudu →</a>
+          </div></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/stepeniste.jpg" alt="Industrijsko stepenište sa rešetkastim stepenicima">
+        <div class="fov"></div>
+        <span class="card-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
+        <div class="bd">
+          <div class="no">03 · STEPENICI</div>
+          <h3>Stepenišna gazišta</h3>
+          <div class="more"><div>
+            <p>SP gazište sa čeonom trakom i rupama za montažu na potkonstrukciju. Površinu dodatno obrađujemo protiv klizanja.</p>
+            <p>Za međuspratna, protivpožarna i privremena stepeništa.</p>
+            <a href="#kontakt">Zatražite ponudu →</a>
+          </div></div>
+        </div>
+      </article>
+      <article class="card">
+        <img src="images/protivklizno-gaziste.jpg" alt="Pocinkovano protivklizno gazište sa nazubljenim lamelama">
+        <div class="fov"></div>
+        <span class="card-go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"></path></svg></span>
+        <div class="bd">
+          <div class="no">04 · PROTIVKLIZNO</div>
+          <h3>Gazišta i trake</h3>
+          <div class="more"><div>
+            <p>Noseća lamela je dodatno nazubljena. Okca 34×38 mm, svetlo okce 30×30 mm. Lamele od 2 do 5 mm.</p>
+            <p>Radimo i protivklizne trake za rampe i stepeništa.</p>
+            <a href="#kontakt">Zatražite ponudu →</a>
+          </div></div>
+        </div>
+      </article>
+    </div>
+    <div class="extra">
+      <p><b style="color: #141718">Vezni elementi uz svaku isporuku.</b> Toplo cinkovan vijak M8×60 (DIN 933), četvorougaona matica (DIN 557) i leptirić. Gazište ne morate da varite, pa cink ostaje ceo.</p>
+      <div class="docs">
+        <a class="tlink" href="https://md.co.rs/pdf/atest_resetke_2mm.pdf">Atest 2 mm (PDF)</a>
+        <a class="tlink" href="https://md.co.rs/pdf/atest_resetke_3mm.pdf">Atest 3 mm (PDF)</a>
+        <a class="tlink" href="https://md.co.rs/pdf/atest_resetke_5mm.pdf">Atest 5 mm (PDF)</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band dark" id="radovi" aria-label="Radovi na Facebooku">
+  <div class="wrap">
+    <div>
+      <div class="kick">Sa terena</div>
+      <h2>Još radova pogledajte na Facebooku</h2>
+      <p>Na stranici „MD Proizvodnja i prodaja gazišta“ objavljujemo fotografije gotovih gazišta i ugradnje. Pratilo nas je 2.200 ljudi, a svi koji su ostavili utisak nas preporučuju.</p>
+    </div>
+    <a class="btn" href="https://www.facebook.com/gaziste"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; fill: #fff"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8.1v3h2.5V21z"></path></svg>Pogledajte radove</a>
+  </div>
+  <div class="wrap fbgrid">
+    <a class="tile" href="https://www.facebook.com/gaziste"><img src="images/resetke-po-meri.webp" alt="Presovane rešetke sa izrezima"><span>Rešetke po meri</span></a>
+    <a class="tile" href="https://www.facebook.com/gaziste"><img src="images/fontana-pirot.jpg" alt="Fontana u centru Pirota"><span>Fontana, Pirot</span></a>
+    <a class="tile" href="https://www.facebook.com/gaziste"><img src="images/sp-gaziste.jpg" alt="SP gazište u autoperionici"><span>Autoperionica</span></a>
+    <a class="tile" href="https://www.facebook.com/gaziste"><img src="images/stepeniste.jpg" alt="Industrijsko stepenište"><span>Stepenište</span></a>
+  </div>
+</section><section class="sec" id="kupci">
+  <div class="wrap">
+    <div class="kick">Radili smo za</div>
+    <div class="logos">
+      <div><img src="images/logo-alfa-plam.svg" alt="Alfa-Plam"></div>
+      <div><img src="images/logo-lafarge.svg" alt="Lafarge"></div>
+      <div><img src="images/logo-tigar.png" alt="Tigar"></div>
+      <div><img src="images/logo-nis.svg" alt="NIS"></div>
+      <div><img src="images/logo-beogradvode.png" alt="Beogradvode"></div>
+    </div>
+    <p class="more-clients">Na našem spisku kupaca je više od 70 firmi, među njima Srbijaautoput, Xella Srbija, Zorka Opeka, Astra Shipyard, Impol Seval i JP PTT Saobraćaja Srbija.</p>
+  </div>
+</section>
+
+<section class="sec about" id="o-nama">
+  <div class="wrap">
+    <div class="two">
+      <div>
+        <div class="kick">O nama</div>
+        <h2 class="h2">Metalna industrija iz Trnovča</h2>
+        <p>Ovim poslom bavimo se još od kraja prošlog veka. Mi smo preduzeće orijentisano na proizvodnju i prodaju sopstvenih proizvoda. Sarađujemo sa firmama u našoj zemlji i sa partnerima u inostranstvu.</p>
+        <p>Gazišta prekrivaju kanale za odvod vode i kišnice i služe kao podovi platformi i stepeništa. Uz gazišta isporučujemo i vezne elemente.</p>
+        <div class="moto">Naš moto: <span>tačnost, korektnost i poštenje.</span></div>
+        <blockquote class="quote">„Već dugi niz godina smo u poslu izrade metalnih proizvoda i veoma smo zadovoljni napretkom firme i razvojem tržišta rešetkastih proizvoda.“<cite>Dragan Bogosavljević, direktor</cite></blockquote>
+      </div>
+      <div>
+        <div class="about-img"><img src="images/o-nama.webp" alt="Radnik MD u pogonu, prsluk sa natpisom MD proizvodnja gazišta" style="object-position: 50% 100%"></div>
+        
+      </div>
+    </div>
+    <div class="g4">
+      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><b>Od 1993.</b><span>Više od 30 godina pravimo gazišta u Trnovču.</span></div>
+      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5M10 14l2 2 4-4"></path></svg><b>Atest na nosivost</b><span>Atest Mašinskog fakulteta, nosivost po m².</span></div>
+      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1"></rect><path d="M9 3v18M15 3v18M3 9h18M3 15h18"></path></svg><b>DIN 24537</b><span>Čelik S235JR po EN 10025, cink po EN ISO 1461.</span></div>
+      <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5l8-2 8 2v16"></path><path d="M9 21v-6h6v6"></path></svg><b>100% srpsko poreklo</b><span>Materijal pretežno iz železare Smederevo.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pitanja">
+  <div class="wrap">
+    <div class="head">
+      <div><div class="kick">Pitanja</div><h2 class="h2">Česta pitanja iz nabavke</h2></div>
+      <p>Odgovori se oslanjaju na podatke sa našeg sajta. Ono što još nismo potvrdili označeno je kao [PRIMER].</p>
+    </div>
+    <div class="faq">
+      <details><summary>Da li uz gazišta dobijam atest?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p>Imamo atest Mašinskog fakulteta na nosivost po metru kvadratnom. Ateste za rešetke od 2, 3 i 5 mm možete da preuzmete iznad, kod proizvoda.</p></details>
+      <details><summary>Od kog materijala pravite gazišta?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p>Od čelika S235JR po EN 10025 (Č.0361), pretežno iz železare Smederevo. Radimo i od Č.0146.</p></details>
+      <details><summary>Da li su gazišta cinkovana?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p>Da. Toplo cinkujemo po EN ISO 1461. Cinkovani su i vijci i matice veznih elemenata.</p></details>
+      <details><summary>Koje su standardne mere?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p>Za presovana gazišta za prelaz vozila: 195×995, 245×995 i 295×995 mm. Sve ostale mere radimo po vašem zahtevu.</p></details>
+      <details><summary>Kako da navedem mere u upitu?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p>Prva dimenzija je pravac oslanjanja noseće lamele. Druga je pravac podužne trake ili stabilizatora.</p></details>
+      <details><summary>Koja okca radite?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p>Presovana gazišta: 33×33 i 33×11 mm. SP i protivklizna: 34×38 mm osovinski, svetlo okce 30×30 mm.</p></details>
+      <details><summary>Kako se gazište pričvršćuje?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p>Veznim elementima: vijak M8×60, četvorougaona matica i leptirić. Tako ne varite gazište i ne oštećujete cink.</p></details>
+      <details><summary>Koliko traje izrada?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p class="ex">[PRIMER] Rok izrade po količini i tipu.</p></details>
+      <details><summary>Da li isporučujete na gradilište?<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></summary><p class="ex">[PRIMER] Način isporuke i područje.</p></details>
+      <div class="ask"><div><b>Imate još pitanja?</b><span>Pozovite nas: 063 232-758</span></div><a href="tel:+38163232758" aria-label="Pozovite 063 232-758"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg></a></div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="sec" id="kontakt" style="border-top: 0">
+  <div class="wrap contact">
+    <div class="info">
+      <div class="kick">Kontakt · Trnovče</div>
+      <h2 class="h2" style="margin-bottom: 24px">Pozovite ili pošaljite upit</h2>
+      <div class="rows">
+        <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg><div><span class="lbl">Mobilni i telefon</span><a href="tel:+38163232758">063 232-758</a><a href="tel:+38112343169">012 343-169</a><span style="font-size: 14px; color: #4E5559">Faks: 012 343-170</span></div></div>
+        <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"></rect><path d="m3 7 9 6 9-6"></path></svg><div><span class="lbl">E-pošta</span><a href="mailto:office@md.co.rs">office@md.co.rs</a></div></div>
+        <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6 7-12a7 7 0 0 0-14 0c0 6 7 12 7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg><div><span class="lbl">Adresa</span><b style="font-size: 17px">Vojvode Stepe 20, 12315 Trnovče</b><div style="font-size: 14px; color: #4E5559">Opština Petrovac na Mlavi</div></div></div>
+        <div><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><div><span class="lbl">Radno vreme</span><span class="ex">[PRIMER] pon - pet, __ - __ h</span></div></div>
+      </div>
+      <div class="map">MAPA: VOJVODE STEPE 20, TRNOVČE</div>
+    </div>
+    <form class="form an" id="upit" aria-label="Upit za ponudu" novalidate><noscript><p>Pošaljite upit na <a href="mailto:office@md.co.rs">office@md.co.rs</a> ili pozovite 063 232-758.</p></noscript></form>
+  </div>
+</section>
+</main>
+
+<footer class="ftr dark">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <img class="flogo" src="images/md-logo.png" alt="MD rešetkasta gazišta">
+        <p>Proizvodnja rešetkastih gazišta od 1993. Proizvodi firme MD su sto posto srpskog porekla.</p>
+        <a class="fb" href="https://www.facebook.com/gaziste"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5H16l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8.1v3h2.5V21z"></path></svg>Facebook: MD gazišta</a>
+      </div>
+      <div>
+        <h4>Proizvodi</h4>
+        <ul><li><a href="#proizvodi">Presovana gazišta</a></li><li><a href="#proizvodi">SP i puna gazišta</a></li><li><a href="#proizvodi">Stepenišna gazišta</a></li><li><a href="#proizvodi">Protivklizno</a></li><li><a href="#proizvodi">Vezni elementi</a></li></ul>
+      </div>
+      <div>
+        <h4>Firma</h4>
+        <ul><li><a href="#o-nama">O nama</a></li><li><a href="#kupci">Kupci</a></li><li><a href="#pitanja">Česta pitanja</a></li><li><a href="https://md.co.rs/pdf/PDV%20obrazac.pdf">PDV obrazac (PDF)</a></li><li><a href="https://md.co.rs/pdf/Identifikacija.pdf">Identifikacija (PDF)</a></li><li><a href="https://md.co.rs/pdf/iban.pdf">IBAN (PDF)</a></li></ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul><li><a href="tel:+38163232758">063 232-758</a></li><li><a href="tel:+38112343169">012 343-169</a></li><li><span>Faks 012 343-170</span></li><li><a href="mailto:office@md.co.rs">office@md.co.rs</a></li><li><span>Vojvode Stepe 20, 12315 Trnovče</span></li><li><span style="color: #E0B341">[PRIMER] Radno vreme · PIB · MB</span></li></ul>
+      </div>
+    </div>
+    <div class="bot">
+      <div>© 2026 MD szmr Trnovče · Samostalna zanatska mašinbravarska radnja MD, Dragan Bogosavljević PR</div>
+      <div>Hero foto: Unsplash</div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script src="upit.js" defer></script>
+
+</body>
+</html>
