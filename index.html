@@ -352,6 +352,17 @@ textarea.field{height:auto;min-height:120px;padding:12px 14px;resize:vertical;fl
 .logos .track img{width:auto;max-width:100%;height:auto;max-height:44px}
 .cta .tlink{font-size:16px}
 }
+
+/* logoi kupaca u boji */
+.logos img,.logos .track img{filter:none;opacity:1}
+/* tačke ispod reda sa radovima (telefon) */
+.dots{display:flex;justify-content:center;gap:4px;margin-top:12px}
+.dots button{width:28px;height:28px;padding:0;border:0;background:none;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.dots button::before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.35);transition:width .25s,background-color .25s}
+.dots button[aria-current="true"]::before{width:22px;border-radius:4px;background:#86DCDF}
+.dots button:focus-visible{outline:2px solid #fff;outline-offset:2px;border-radius:4px}
+@media (min-width:768px){.dots{display:none}}
+@media (prefers-reduced-motion:reduce){.dots button::before{transition:none}}
 @media (prefers-reduced-motion:reduce){.card img,.more,.faq summary svg{transition:none}.card:hover img{transform:none}}
 </style>
 
@@ -482,6 +493,7 @@ textarea.field{height:auto;min-height:120px;padding:12px 14px;resize:vertical;fl
     <a class="tile" href="https://www.facebook.com/gaziste"><img src="images/sp-gaziste.jpg" alt="SP gazište u autoperionici"><span>Autoperionica</span></a>
     <a class="tile" href="https://www.facebook.com/gaziste"><img src="images/stepeniste.jpg" alt="Industrijsko stepenište"><span>Stepenište</span></a>
   </div>
+  <div class="dots" role="group" aria-label="Izbor slike"></div>
 </section><section class="sec" id="kupci">
   <div class="wrap">
     <div class="kick">Radili smo za</div>

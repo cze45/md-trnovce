@@ -33,6 +33,29 @@
     window.matchMedia('(min-width: 768px)').addEventListener('change', function (m) { if (m.matches) setOpen(false); });
   }
 
+  // --- tačke ispod reda sa radovima: pokazuju koja je slika na ekranu, klik vodi na nju
+  var grid = document.querySelector('.fbgrid'), dots = document.querySelector('.dots');
+  if (grid && dots) {
+    var tiles = [].slice.call(grid.querySelectorAll('.tile'));
+    tiles.forEach(function (t, i) {
+      var d = document.createElement('button');
+      d.type = 'button';
+      d.setAttribute('aria-label', 'Slika ' + (i + 1) + ' od ' + tiles.length);
+      d.addEventListener('click', function () {
+        grid.scrollTo({ left: t.offsetLeft - (grid.clientWidth - t.offsetWidth) / 2, behavior: 'smooth' });
+      });
+      dots.appendChild(d);
+    });
+    var mark = function () {
+      var mid = grid.scrollLeft + grid.clientWidth / 2, best = 0, bestD = Infinity;
+      tiles.forEach(function (t, i) { var d = Math.abs(t.offsetLeft + t.offsetWidth / 2 - mid); if (d < bestD) { bestD = d; best = i; } });
+      [].forEach.call(dots.children, function (d, i) { d.setAttribute('aria-current', String(i === best)); });
+    };
+    grid.addEventListener('scroll', mark, { passive: true });
+    window.addEventListener('resize', mark);
+    mark();
+  }
+
   // --- mapa: Vojvode Stepe 20, Trnovče (koordinate iz OpenStreetMap)
   var el = document.getElementById('mapa');
   if (!el || !window.L) return;
