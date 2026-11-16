@@ -37,14 +37,12 @@
   var grid = document.querySelector('.fbgrid'), dots = document.querySelector('.dots');
   if (grid && dots) {
     var tiles = [].slice.call(grid.querySelectorAll('.tile'));
-    tiles.forEach(function (t, i) {
-      var d = document.createElement('button');
-      d.type = 'button';
-      d.setAttribute('aria-label', 'Slika ' + (i + 1) + ' od ' + tiles.length);
+    // tačke su već u HTML-u (vide se i pre nego što se skript učita); ovde dobijaju klik
+    [].forEach.call(dots.children, function (d, i) {
+      var t = tiles[i]; if (!t) return;
       d.addEventListener('click', function () {
         grid.scrollTo({ left: t.offsetLeft - (grid.clientWidth - t.offsetWidth) / 2, behavior: 'smooth' });
       });
-      dots.appendChild(d);
     });
     var mark = function () {
       var mid = grid.scrollLeft + grid.clientWidth / 2, best = 0, bestD = Infinity;
