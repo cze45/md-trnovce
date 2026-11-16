@@ -364,10 +364,11 @@ textarea.field{height:auto;min-height:120px;padding:12px 14px;resize:vertical;fl
 @media (min-width:768px){.dots{display:none}}
 @media (prefers-reduced-motion:reduce){.dots button::before{transition:none}}
 
-/* sertifikat TÜV SÜD u sekciji O nama (tamna podloga, jer je natpis beo) */
-.cert{margin-top:16px;border-radius:8px;padding:18px 20px;color:#EEF1F2;background-color:#1A1E21;background-image:url(images/tekstura.png);background-size:179px 179px;display:grid;gap:12px}
-.cert img{display:block;width:100%;max-width:340px;height:auto}
-.cert p{font-size:14px;line-height:1.5;color:#B3BABE;max-width:none}
+/* znak TÜV SÜD u sekciji O nama */
+.cert{margin-top:16px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cert img{display:block;width:60px;height:auto}
+.cert p{font-size:15px;line-height:1.55;color:var(--muted);max-width:none}
+.cert b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
 @media (prefers-reduced-motion:reduce){.card img,.more,.faq summary svg{transition:none}.card:hover img{transform:none}}
 </style>
 
@@ -527,7 +528,7 @@ textarea.field{height:auto;min-height:120px;padding:12px 14px;resize:vertical;fl
       </div>
       <div>
         <div class="about-img"><img src="images/o-nama.webp" alt="Radnik MD u pogonu, prsluk sa natpisom MD proizvodnja gazišta" style="object-position: 50% 100%"></div>
-        <div class="cert"><img src="images/tuv-sud.png" alt="TÜV SÜD: Nemačka je rekla DA!" width="368" height="74"><p><span class="ex" style="color:#E0B341">[PRIMER]</span> Navesti šta je sertifikovano (proizvod ili proizvodnja), standard i broj sertifikata.</p></div>
+        <div class="cert"><img src="images/tuv-sud-znak.png" alt="TÜV SÜD" width="73" height="74"><p><b>TÜV SÜD</b>Nemačka organizacija za nezavisna ispitivanja, kontrolu i sertifikaciju. Njen znak smeju da koriste samo firme koje su prošle proveru. <span style="color:#7A5400;font-weight:500">[PRIMER]</span> Šta je tačno sertifikovano kod MD i broj sertifikata.</p></div>
         
       </div>
     </div>
