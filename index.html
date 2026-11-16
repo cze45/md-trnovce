@@ -64,7 +64,7 @@ p{max-width:65ch}
 /* hero: fotografija je pozadina desne strane heroja (do ivice ekrana) i bledi ka tekstu.
    Prelaz počinje tek posle kraja tekstualne kolone, pa se tekst i slika ne preklapaju */
 .hero{position:relative;overflow:hidden;display:flex;align-items:flex-end}
-.hero img.bg{position:absolute;left:0;top:0;width:100%;height:calc(min(100vw,440px) + 76px);object-fit:cover;object-position:50% 40%;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 8%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 8%,#000 70%,transparent 100%)}
+.hero img.bg{position:absolute;left:0;top:44px;width:100%;height:calc(min(100vw,440px) + 40px);object-fit:cover;object-position:50% 40%;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 16%,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 16%,#000 70%,transparent 100%)}
 .hero .wrap{position:relative;width:100%;padding-top:calc(min(100vw,440px) + 92px);padding-bottom:24px}
 .hero h1{font-size:clamp(3rem,1.6rem + 3.4vw,3.85rem);font-weight:800;margin-top:14px;letter-spacing:-.035em}
 .sub{font-size:18px;color:var(--muted);margin:18px 0 28px}
@@ -293,7 +293,6 @@ textarea.field{height:auto;min-height:120px;padding:12px 14px;resize:vertical;fl
 .band .fbgrid .tile{flex:0 0 80%;scroll-snap-align:center}
 /* --- telefon: logo u zaglavlju čitljiv preko vrha slike */
 .hero .wrap{z-index:2}
-.hero::before{content:"";position:absolute;z-index:1;left:0;right:0;top:0;pointer-events:none;height:150px;background:radial-gradient(ellipse 190px 70px at 80px 40px,rgba(230,232,231,.96) 45%,rgba(230,232,231,0) 100%),linear-gradient(180deg,rgba(230,232,231,.9) 0%,rgba(230,232,231,.7) 45%,rgba(230,232,231,0) 100%)}
 /* --- mapa sa pinom MD */
 .map{flex:1;min-height:300px;background:#D6DAD8;border:1px solid var(--line);border-radius:8px;padding:0;overflow:hidden;position:relative;z-index:0}
 .map-link{margin-top:8px}
@@ -317,6 +316,32 @@ textarea.field{height:auto;min-height:120px;padding:12px 14px;resize:vertical;fl
 .band .fbgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;overflow:visible;margin:48px auto 0;padding:0 max(16px,env(safe-area-inset-right)) 0 max(16px,env(safe-area-inset-left))}
 .band .fbgrid .tile{flex:none}
 .map{min-height:200px}
+}
+
+/* --- iOS: zaglavlje providno na vrhu; WebKit nema scroll animacije, pa klasu "solid" dodaje site.js */
+.hdr.js{animation:none;background:transparent;border-bottom-color:transparent;transition:background-color .25s,border-color .25s}
+.hdr.js.solid{background:rgba(230,232,231,.97);border-bottom-color:var(--line)}
+.hdr.js.open{background:#E6E8E7;border-bottom-color:var(--line)}
+/* --- iOS: crte u hamburger dugmetu imaju zadatu širinu (u <button> se ne razvlače same) */
+.burger{align-items:center}
+.burger span{width:24px;flex:none}
+/* --- karusel: svaki logo u kutiji iste širine, pa se ne preklapaju (SVG bez širine na iOS-u) */
+.logos .track div{width:170px;min-height:88px;padding:0 22px;display:flex;align-items:center;justify-content:center}
+.logos .track img{display:block;width:100%;height:38px;max-width:none;max-height:none;object-fit:contain}
+/* --- dugme i link ka radovima u istom redu */
+.cta{flex-wrap:nowrap;gap:16px}
+.cta .btn{flex:none;padding:0 22px}
+.cta .tlink{display:block;font-size:15px;line-height:1.35;min-width:0;min-height:0;padding:6px 0;border-bottom:0}
+/* --- 100% srpsko poreklo u bojama zastave */
+.trust .rs::before{width:16px;height:11px;transform:none;border:1px solid #9AA0A4;background:linear-gradient(180deg,#C6363C 0 33.3%,#0C4076 33.3% 66.6%,#fff 66.6%)}
+.trust .rs{gap:0}
+.trust .rs::before{margin-right:8px}
+.rs .r{color:#C6363C;font-weight:600}
+.rs .b{color:#0C4076;font-weight:600}
+@media (min-width:768px){
+.logos .track div{width:auto;min-height:104px;padding:20px}
+.logos .track img{width:auto;max-width:100%;height:auto;max-height:44px}
+.cta .tlink{font-size:16px}
 }
 @media (prefers-reduced-motion:reduce){.card img,.more,.faq summary svg{transition:none}.card:hover img{transform:none}}
 </style>
@@ -353,7 +378,7 @@ textarea.field{height:auto;min-height:120px;padding:12px 14px;resize:vertical;fl
       <h1>Rešetke i gazišta po vašoj meri</h1>
       <p class="sub">Presovana, SP, puna i protivklizna gazišta, stepenici i vezni elementi. Pravimo ih po DIN 24537 i toplo cinkujemo po EN ISO 1461.</p>
       <div class="cta"><a class="btn" href="#kontakt">Zatraži ponudu</a><a class="tlink" href="#radovi">Pogledajte naše radove <span aria-hidden="true">→</span></a></div>
-      <div class="trust"><span>Atest Mašinskog fakulteta</span><span>S235JR · Č.0361</span><span>100% srpsko poreklo</span></div>
+      <div class="trust"><span>Atest Mašinskog fakulteta</span><span>S235JR · Č.0361</span><span class="rs"><b class="r">100%</b>&nbsp;<b class="b">srpsko</b>&nbsp;poreklo</span></div>
     </div>
   </div>
 </div>

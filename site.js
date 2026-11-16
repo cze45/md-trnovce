@@ -1,7 +1,14 @@
 // Meni za telefon (hamburger) i mapa sa pinom MD.
 (function () {
-  // --- hamburger meni
+  // --- zaglavlje: providno na vrhu strane, sa pozadinom posle skrola (radi i u WebKit-u na iOS-u)
   var hdr = document.querySelector('.hdr'), btn = document.querySelector('.burger'), panel = document.getElementById('mnav');
+  if (hdr) {
+    hdr.classList.add('js');
+    var onScroll = function () { hdr.classList.toggle('solid', window.scrollY > 40); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+  // --- hamburger meni
   if (btn && panel) {
     var setOpen = function (open) {
       btn.setAttribute('aria-expanded', String(open));
