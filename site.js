@@ -10,11 +10,22 @@
   }
   // --- hamburger meni
   if (btn && panel) {
+    var closeTimer;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
     var setOpen = function (open) {
       btn.setAttribute('aria-expanded', String(open));
       btn.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
-      panel.hidden = !open;
       hdr.classList.toggle('open', open);
+      clearTimeout(closeTimer);
+      if (open) {
+        panel.hidden = false;
+        void panel.offsetWidth; // da animacija krene od zatvorenog stanja
+        panel.classList.add('show');
+      } else {
+        panel.classList.remove('show');
+        // sakrij tek kad se animacija zatvaranja završi (tada linkovi nisu dostupni tastaturi)
+        closeTimer = setTimeout(function () { panel.hidden = true; }, reduce.matches ? 0 : 420);
+      }
     };
     btn.addEventListener('click', function () { setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
     panel.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
