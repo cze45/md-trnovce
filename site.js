@@ -1,0 +1,30 @@
+// Meni za telefon (hamburger) i mapa sa pinom MD.
+(function () {
+  // --- hamburger meni
+  var hdr = document.querySelector('.hdr'), btn = document.querySelector('.burger'), panel = document.getElementById('mnav');
+  if (btn && panel) {
+    var setOpen = function (open) {
+      btn.setAttribute('aria-expanded', String(open));
+      btn.setAttribute('aria-label', open ? 'Zatvori meni' : 'Otvori meni');
+      panel.hidden = !open;
+      hdr.classList.toggle('open', open);
+    };
+    btn.addEventListener('click', function () { setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+    panel.addEventListener('click', function (e) { if (e.target.closest('a')) setOpen(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { setOpen(false); btn.focus(); } });
+    window.matchMedia('(min-width: 768px)').addEventListener('change', function (m) { if (m.matches) setOpen(false); });
+  }
+
+  // --- mapa: Vojvode Stepe 20, Trnovče (koordinate iz OpenStreetMap)
+  var el = document.getElementById('mapa');
+  if (!el || !window.L) return;
+  var pos = [44.431106, 21.376676];
+  var map = L.map(el, { center: pos, zoom: 14, scrollWheelZoom: false, dragging: !L.Browser.mobile, tap: false, attributionControl: true });
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  var icon = L.divIcon({ className: 'md-pin', html: '<div class="pin"><img src="images/md-logo.png" alt=""></div>', iconSize: [64, 64], iconAnchor: [32, 77], popupAnchor: [0, -70] });
+  L.marker(pos, { icon: icon, title: 'MD szmr Trnovče', alt: 'MD szmr Trnovče, Vojvode Stepe 20' }).addTo(map)
+    .bindPopup('<b>MD szmr Trnovče</b><br>Vojvode Stepe 20, 12315 Trnovče');
+})();
